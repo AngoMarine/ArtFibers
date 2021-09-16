@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div id="app">
+    <div id="app"> <!-- dans app il y a toute la logique de l'application-->
       <nav>
         <div class="nav-container">
           <div id="logo">
@@ -25,18 +25,18 @@
           <ul id="icons">
             <li>
               <router-link to="/user-settings">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user"></i> <!-- logo user-->
               </router-link>
             </li>
             <li>
               <router-link to="/wish-list">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i> <!-- logo like-->
                 <span id="nav-not"></span>
               </router-link>
             </li>
             <li>
               <router-link to="/shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart"></i> <!-- logo cadi-->
               </router-link>
             </li>
           </ul>
@@ -49,6 +49,7 @@
     <!-- home template component -->
     <script type="text/x-template" id="home">
       <div class="home-container">
+        
         <h1>Découvrez les oeuvres diponibles en ce moment !</h1>
 
         <!-- search display -->
@@ -155,8 +156,8 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- on importe le framework vue-->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> <!-- on importe le router vue-->
     <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
     <script src="./assets/js/vue.js" type="text/javascript"></script>
   </body>

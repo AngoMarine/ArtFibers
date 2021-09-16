@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JustFS/vue-project.git"
+    "url": "git+https://github.com/AngoMarine/ArtFibers.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JustFS/vue-project/issues"
+    "url": "https://github.com/AngoMarine/ArtFibers.git"
   },
-  "homepage": "https://github.com/JustFS/vue-project#readme"
+  "homepage": "https://github.com/AngoMarine/ArtFibers.git#readme"
 }
