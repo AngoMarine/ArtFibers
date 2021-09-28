@@ -34,3 +34,19 @@ window.addEventListener("load", () => {
 
 });
 
+// code des pop quand on clic sur l'icone loupe
+var Détails = document.getElementById('Détails');
+var overlay = document.getElementById('overlay');
+var btnclose = document.getElementById('btnclose');
+
+Détails.addEventListener('click', openModal);
+btnclose.addEventListener('click', closePopup);
+
+// on ouvre la fenetre quand on clique sur la loupe
+function openModal() { 
+  overlay.style.display = 'block';
+}
+
+function closePopup(){
+  overlay.style.display = 'none';
+}

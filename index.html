@@ -2,19 +2,25 @@
 <html lang="fr">
   <head>
     <title>Vue Project</title>
-
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <link rel="icon" href="./assets/img/vueLogo.png" type="image/png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
-    <link href="./assets/style/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style/style.css"  />
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css"/> -->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="app"> <!-- dans app il y a toute la logique de l'application-->
-      <nav>
+      <nav> <!-- Navigation-->
         <div class="nav-container">
           <div id="logo">
             <router-link to="/">
@@ -49,9 +55,13 @@
     <!-- home template component -->
     <script type="text/x-template" id="home">
       <div class="home-container">
-        
-        <h1>Découvrez les oeuvres diponibles en ce moment !</h1>
-
+        <div class="container px-4 px-lg-5 my-5">
+          <div class="text-center text-white">
+            <br><br>
+              <h1 class="display-4 fw-bolder">Shop your dream work of art</h1>
+              <p class="lead fw-normal text-white-50 mb-0">With this shop website</p>
+          </div>
+        </div>
         <!-- search display -->
         <input v-model="searchKey" id="search" type="search" placeholder="Rechercher..." autocomplete="off">
         <span v-if="searchKey && filteredList.length >= 1 ">
@@ -91,6 +101,16 @@
                   <button v-on:click="addToCart(product)">
                     <i class="fas fa-shopping-cart"></i>
                   </button>
+                </div>
+                <div class="Détails">
+                  <button id="Détails" class="Détails" ><i class="fas fa-search"></i> </button>
+                    
+                    <div id="overlay" class="overlay">
+                      <div id="popup" class="popup">
+                        <span id="btnclose" class="btnclose">&times;</span>
+                          <p> contenu du pop </p>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -153,7 +173,47 @@
         </div>
       </div>
     </script>
-
+    
+    <div class="footer-clean">
+      <footer>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-sm-4 col-md-3 item">
+                    
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Web design</a></li>
+                          <li><a href="#">Development</a></li>
+                          <li><a href="#">Hosting</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Legacy</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Careers</h3>
+                      <ul>
+                          <li><a href="#">Job openings</a></li>
+                          <li><a href="#">Employee success</a></li>
+                          <li><a href="#">Benefits</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                      <p class="copyright">ArtFibers © 2021</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- on importe le framework vue-->
